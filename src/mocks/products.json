@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "nombre": "Salmón Sashimi",
+      "tipo": "sashimi",
+      "precio": 8.99,
+      "imagenes": "../sushis/salon sashimi.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Atún Sashimi",
+      "tipo": "sashimi",
+      "precio": 9.99,
+      "imagenes": "../sushis/atun sashimi.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Pez mantequilla Sashimi",
+      "tipo": "sashimi",
+      "precio": 10.49,
+      "imagenes": "../sushis/SASHIMI-PEZ-MANTEQUILLA.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Pargo Sashimi",
+      "tipo": "sashimi",
+      "precio": 11.99,
+      "imagenes": "../sushis/pargo.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "California Roll Maki",
+      "tipo": "maki",
+      "precio": 12.99,
+      "imagenes": "../sushis/caliofrnia roll.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Sake Maki",
+      "tipo": "maki",
+      "precio": 10.99,
+      "imagenes": "../sushis/maki-sake.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Kappa Maki",
+      "tipo": "maki",
+      "precio": 9.49,
+      "imagenes": "../sushis/kappa-maki-square.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Tekka Maki",
+      "tipo": "maki",
+      "precio": 11.49,
+      "imagenes": "../sushis/tekka_maki.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Salmón Nigiri",
+      "tipo": "nigiri",
+      "precio": 5.99,
+      "imagenes": "../sushis/salmonnigiri.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "Langostino Nigiri",
+      "tipo": "nigiri",
+      "precio": 7.99,
+      "imagenes": "../sushis/langostino nigiri.jpg"
+    }
+  ]
+}
