@@ -1,22 +1,43 @@
-import cart from '../assets/cart-shopping-svgrepo-com.svg'
-
+import { useContext } from "react";
+import ButtonAddCart from "../components/ButtonAddCart";
+import CartContext from "../Context/CartContext";
 
 export function Products({ products }) {
+  const {addItemToCart} = useContext(CartContext)
+
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <ul>
-        {products.map(product => (
-          <li className='flex justify-center items-center text-white' key={product.id}>
-            <div className="card flex justify-center items-center flex-col">
-              <h3 className="">{product.nombre}</h3>
-              <img src={product.imagenes} alt={product.nombre} style={{}} />
-              <p>Precio: ${product.precio}</p>
-              <button onClick={cart}></button>
+    <>
+      <ul className="flex justify-center items-center flex-wrap gap-10 mt-5">
+        {products.map((product) => (
+          <div
+            className="flex flex-col justify-start items-center bg-transparent shadow-lg rounded-lg gap-3"
+            style={{ width: "320px", height: "433px" }}
+            key={product.id}
+          >
+            <div
+              className="w-full relative rounded-t-lg overflow-hidden"
+              style={{ boxShadow: "0px 8px 10px #c0bdb9", height: "200px" }}
+            >
+              <img
+                src={product.imagenes}
+                className="w-full h-full object-cover rounded-t-lg max-w-full"
+                alt={product.nombre}
+              />
             </div>
-          </li>
+            <div className="flex flex-col justify-center items-center p-5 gap-5">
+              <h3 className="text-xl font-bold uppercase">{product.nombre}</h3>
+              <p className="text-sm text-center">{product.descripcion}</p>
+              <span className="text-lg font-bold text-orange-500">
+                ${product.precio}
+              </span>
+              <button onClick={() => addItemToCart(product)}>
+                <ButtonAddCart />
+              </button>
+            </div>
+          </div>
         ))}
       </ul>
-    </div>
+    </>
   );
 }

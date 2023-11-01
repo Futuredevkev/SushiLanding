@@ -13,6 +13,6 @@
   }
   
   .menu-item.selected {
-    border-bottom: 3px solid rgb(187, 247, 208); 
+    border-bottom: 3px solid orange; 
     margin-bottom: 1px; 
   }

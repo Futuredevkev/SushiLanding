@@ -5,70 +5,90 @@
       "nombre": "Salmón Sashimi",
       "tipo": "sashimi",
       "precio": 8.99,
-      "imagenes": "../sushis/salon sashimi.jpg"
+      "imagenes": "../public/sushis/salon sashimi.jpg",
+      "descripcion": "Fresco filete de salmón crudo cortado en finas láminas.",
+      "amount": 0
     },
     {
       "id": 2,
       "nombre": "Atún Sashimi",
       "tipo": "sashimi",
       "precio": 9.99,
-      "imagenes": "../sushis/atun sashimi.jpg"
+      "imagenes": "../public/sushis/atun sashimi.jpg",
+      "descripcion": "Delicioso atún fresco cortado en rebanadas delgadas para sashimi.",
+      "amount": 0
     },
     {
       "id": 3,
       "nombre": "Pez mantequilla Sashimi",
       "tipo": "sashimi",
       "precio": 10.49,
-      "imagenes": "../sushis/SASHIMI-PEZ-MANTEQUILLA.jpg"
+      "imagenes": "../public/sushis/SASHIMI-PEZ-MANTEQUILLA.jpg",
+      "descripcion": "Exquisito sashimi de pez mantequilla, suave y sabroso.",
+      "amount": 0
     },
     {
       "id": 4,
       "nombre": "Pargo Sashimi",
       "tipo": "sashimi",
       "precio": 11.99,
-      "imagenes": "../sushis/pargo.jpg"
+      "imagenes": "../public/sushis/pargo.jpg",
+      "descripcion": "Sashimi de pargo fresco, una opción llena de sabor.",
+      "amount": 0
     },
     {
       "id": 5,
       "nombre": "California Roll Maki",
       "tipo": "maki",
       "precio": 12.99,
-      "imagenes": "../sushis/caliofrnia roll.jpg"
+      "imagenes": "../public/sushis/caliofrnia roll.jpg",
+      "descripcion": "Maki enrollado con palta, pepino y cangrejo, cubierto con sésamo.",
+      "amount": 0
     },
     {
       "id": 6,
       "nombre": "Sake Maki",
       "tipo": "maki",
       "precio": 10.99,
-      "imagenes": "../sushis/maki-sake.jpg"
+      "imagenes": "../public/sushis/maki-sake.jpg",
+      "descripcion": "Maki de salmón fresco, una elección sabrosa para los amantes del salmón.",
+      "amount": 0
     },
     {
       "id": 7,
       "nombre": "Kappa Maki",
       "tipo": "maki",
       "precio": 9.49,
-      "imagenes": "../sushis/kappa-maki-square.jpg"
+      "imagenes": "../public/sushis/kappa-maki-square.jpg",
+      "descripcion": "Maki de pepino, una opción refrescante y vegetariana.",
+      "amount": 0
     },
     {
       "id": 8,
       "nombre": "Tekka Maki",
       "tipo": "maki",
       "precio": 11.49,
-      "imagenes": "../sushis/tekka_maki.jpg"
+      "imagenes": "../public/sushis/tekka_maki.jpg",
+      "descripcion": "Rollos de sushi con atún fresco, un clásico delicioso.",
+      "amount": 0
     },
     {
       "id": 9,
       "nombre": "Salmón Nigiri",
       "tipo": "nigiri",
       "precio": 5.99,
-      "imagenes": "../sushis/salmonnigiri.jpg"
+      "imagenes": "../public/sushis/salmonnigiri.jpg",
+      "descripcion": "Salmón sobre arroz, un nigiri clásico y delicioso.",
+      "amount": 0
     },
     {
       "id": 10,
       "nombre": "Langostino Nigiri",
       "tipo": "nigiri",
       "precio": 7.99,
-      "imagenes": "../sushis/langostino nigiri.jpg"
+      "imagenes": "../public/sushis/langostino nigiri.jpg",
+      "descripcion": "Langostino sobre arroz, un nigiri exquisito y elegante.",
+      "amount": 0
     }
   ]
 }
