@@ -34,6 +34,11 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+   // Eliminar todo del carrito 
+
+   const DeleteAll = () => {
+    setCartItems([]);
+  } 
 
   const deleteItemToCart = (product) => {
     const inCart = cartItems.find(
@@ -57,7 +62,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cartItems, addItemToCart, deleteItemToCart }}
+      value={{ cartItems, addItemToCart, deleteItemToCart, DeleteAll }}
     >
       {children}
     </CartContext.Provider>

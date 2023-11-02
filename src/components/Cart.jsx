@@ -13,6 +13,8 @@ const Cart = () => {
     navigateTo("/checkout");
   }
 
+
+ 
   
   /* Creamos 2 estados, uno para ver si el carrito esta abierto o no 
 
@@ -25,7 +27,7 @@ const Cart = () => {
   /* Traemos del context los productos del carrito */
   
 
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, DeleteAll } = useContext(CartContext);
 
   /* Cada vez que se modifica el carrito, actualizamos la cantidad de productos */
 
@@ -92,7 +94,7 @@ const Cart = () => {
 
       {cartItems && cartOpen && (
         <div className={cart.cart}>
-          <h2 className="font-bold uppercase text-2xl">Tu carrito</h2>
+          <h2 className="font-bold uppercase text-4xl">Tu carrito</h2>
 
           {cartItems.length === 0 ? (
             <p className={cart.cartVacio}>Tu carrito esta vacio</p>
@@ -103,7 +105,7 @@ const Cart = () => {
               ))}
             </div>
           )}
-            <div className="flex justify-between p-5 items-center">    
+            <div className="flex justify-between p-5 items-end h-full">    
           <h2 style={{fontWeight:'bold', fontSize:'25px'}} className={cart.total}>Total: ${total}</h2>
           <button
           onClick={handleGoToCheckout}
@@ -111,6 +113,12 @@ const Cart = () => {
         >
           Ir a Pago
         </button>
+        <button
+        onClick={DeleteAll}
+        className="bg-orange-500 text-white px-8 py-2 rounded-md hover:bg-red-600"
+      >
+        Eliminar Todo
+      </button>
         </div>
         </div>
       )}
