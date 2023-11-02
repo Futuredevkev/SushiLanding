@@ -3,9 +3,9 @@ import React, { createContext, useEffect, useState } from "react";
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartItem, setCartItems] = useState(() => {
+  const [cartItems, setCartItems] = useState(() => {
     try {
-      const productosEnLocalStorage = localStorage.getItem('cartProducts');
+      const productosEnLocalStorage = localStorage.getItem("cartProducts");
       return productosEnLocalStorage ? JSON.parse(productosEnLocalStorage) : [];
     } catch (error) {
       return [];
@@ -13,33 +13,40 @@ export const CartProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    localStorage.setItem('cartProducts', JSON.stringify(cartItem));
-  }, [cartItem]);
+    localStorage.setItem("cartProducts", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const addItemToCart = (product) => {
-    const inCart = cartItem.find((productInCart) => productInCart.id === product.id);
+    const inCart = cartItems.find(
+      (productInCart) => productInCart.id === product.id
+    );
 
     if (inCart) {
       setCartItems(
-        cartItem.map((productInCart) => {
+        cartItems.map((productInCart) => {
           if (productInCart.id === product.id) {
             return { ...inCart, amount: inCart.amount + 1 };
           } else return productInCart;
         })
       );
     } else {
-      setCartItems([...cartItem, { ...product, amount: 1 }]);
+      setCartItems([...cartItems, { ...product, amount: 1 }]);
     }
   };
 
-  const deleteItemToCart = (product) => {
-    const inCart = cartItem.find((productInCart) => productInCart.id === product.id);
 
-    if (inCart && inCart.amount === 1) {
-      setCartItems(cartItem.filter((productInCart) => productInCart.id !== product.id));
-    } else if (inCart) {
+  const deleteItemToCart = (product) => {
+    const inCart = cartItems.find(
+      (productInCart) => productInCart.id === product.id
+    );
+
+    if (inCart.amount === 1) {
       setCartItems(
-        cartItem.map((productInCart) => {
+        cartItems.filter((productInCart) => productInCart.id !== product.id)
+      );
+    } else {
+      setCartItems(
+        cartItems.map((productInCart) => {
           if (productInCart.id === product.id) {
             return { ...inCart, amount: inCart.amount - 1 };
           } else return productInCart;
@@ -49,7 +56,9 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cartItem, addItemToCart, deleteItemToCart }}>
+    <CartContext.Provider
+      value={{ cartItems, addItemToCart, deleteItemToCart }}
+    >
       {children}
     </CartContext.Provider>
   );

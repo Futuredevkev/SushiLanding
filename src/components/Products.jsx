@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import ButtonAddCart from "../components/ButtonAddCart";
 import CartContext from "../Context/CartContext";
 
 export function Products({ products }) {
-  const {addItemToCart} = useContext(CartContext)
+
+  const { addItemToCart } = useContext(CartContext)
 
 
   return (
@@ -31,8 +31,8 @@ export function Products({ products }) {
               <span className="text-lg font-bold text-orange-500">
                 ${product.precio}
               </span>
-              <button onClick={() => addItemToCart(product)}>
-                <ButtonAddCart />
+              <button className="bg-orange-500 rounded-sm w-36 h-10 font-bold uppercase text-white" onClick={() => addItemToCart(product)} >
+                Add to Cart
               </button>
             </div>
           </div>

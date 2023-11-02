@@ -2,18 +2,29 @@ import  { useContext, useEffect, useState } from "react";
 import CartContext from "../Context/CartContext";
 import cart from './cart.module.css';
 import ItemCart from "./ItemCart";
+import { useNavigate  } from 'react-router-dom';
 
 
 const Cart = () => {
+
+  const navigateTo = useNavigate();
+
+  const handleGoToCheckout = () => {
+    navigateTo("/checkout");
+  }
+
   
   /* Creamos 2 estados, uno para ver si el carrito esta abierto o no 
 
   y otro para obtener la cantidad de productos que tenemos en el carrito */
+  
 
   const [cartOpen, setCartOpen] = useState(false);
   const [productsLength, setProductsLength] = useState(0);
 
   /* Traemos del context los productos del carrito */
+  
+
   const { cartItems } = useContext(CartContext);
 
   /* Cada vez que se modifica el carrito, actualizamos la cantidad de productos */
@@ -27,7 +38,7 @@ const Cart = () => {
   /* Obtenemos el precio total */
   
   const total = cartItems?.reduce(
-    (previous, current) => previous + current.amount * current.price,
+    (previous, current) => previous + current.amount * current.precio,
     0
   );
 
@@ -81,7 +92,7 @@ const Cart = () => {
 
       {cartItems && cartOpen && (
         <div className={cart.cart}>
-          <h2>Tu carrito</h2>
+          <h2 className="font-bold uppercase text-2xl">Tu carrito</h2>
 
           {cartItems.length === 0 ? (
             <p className={cart.cartVacio}>Tu carrito esta vacio</p>
@@ -92,8 +103,15 @@ const Cart = () => {
               ))}
             </div>
           )}
-
-          <h2 className={cart.total}>Total: ${total}</h2>
+            <div className="flex justify-between p-5 items-center">    
+          <h2 style={{fontWeight:'bold', fontSize:'25px'}} className={cart.total}>Total: ${total}</h2>
+          <button
+          onClick={handleGoToCheckout}
+          className="bg-orange-500 text-white px-8 py-2 rounded-md hover:bg-red-600"
+        >
+          Ir a Pago
+        </button>
+        </div>
         </div>
       )}
     </div>
