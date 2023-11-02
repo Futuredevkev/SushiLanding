@@ -20,7 +20,7 @@
   }
   
   .cartContainer .buttonCartContainer .buttonCart {
-    background-color: #222222;
+    background-color: #fff;
     width: 60px;
     height: 60px;
     display: flex;
@@ -36,7 +36,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #fb3939;
+    background-color: rgb(255, 128, 0);
     font-size: 12px;
     font-weight: bold;
     color: white;

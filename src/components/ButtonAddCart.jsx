@@ -1,7 +1,7 @@
 export default function ButtonAddCart() {
   return (
     <>
-      <button>
+      <div>
         <a className="rounded-lg  relative w-36 h-10 cursor-pointer flex items-center border border-orange-500 bg-orange-500 group hover:bg-orange-500 active:bg-green-500 active:border-orange-500">
           <span className="text-black font-semibold ml-8 transform group-hover:translate-x-20 transition-all duration-300">
             Add Item
@@ -12,9 +12,9 @@ export default function ButtonAddCart() {
               fill="none"
               height="24"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               viewBox="0 0 24 24"
               width="24"
               xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ export default function ButtonAddCart() {
             </svg>
           </span>
         </a>
-      </button>
+      </div>
     </>
   );
 }

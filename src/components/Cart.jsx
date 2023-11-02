@@ -4,11 +4,19 @@ import cart from './cart.module.css';
 import ItemCart from "./ItemCart";
 
 
-export default function Cart() {
+const Cart = () => {
+  
+  /* Creamos 2 estados, uno para ver si el carrito esta abierto o no 
+
+  y otro para obtener la cantidad de productos que tenemos en el carrito */
+
   const [cartOpen, setCartOpen] = useState(false);
   const [productsLength, setProductsLength] = useState(0);
 
+  /* Traemos del context los productos del carrito */
   const { cartItems } = useContext(CartContext);
+
+  /* Cada vez que se modifica el carrito, actualizamos la cantidad de productos */
 
   useEffect(() => {
     setProductsLength(
@@ -16,6 +24,8 @@ export default function Cart() {
     );
   }, [cartItems]);
 
+  /* Obtenemos el precio total */
+  
   const total = cartItems?.reduce(
     (previous, current) => previous + current.amount * current.price,
     0
@@ -23,56 +33,71 @@ export default function Cart() {
 
   return (
     <div className={cart.cartContainer}>
-      <div onClick={() => {setCartOpen(!cartOpen)}} className={cart.buttonCartContainer}>
+      <div
+        onClick={() => setCartOpen(!cartOpen)}
+        className={cart.buttonCartContainer}
+      >
         <div className={cart.buttonCart}>
           {!cartOpen ? (
-            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <g id="Ikon">
-                <path d="m26.6387 7h-18.9178l-.7722-2.3164a1 1 0 0 0 -.9487-.6836h-3a1 1 0 0 0 0 2h2.2793l.76 2.28 2.6116 10.4475a2.9958 2.9958 0 0 0 2.9106 2.2725h13.7442a2.9892 2.9892 0 0 0 2.9589-2.5068l1.334-8a3.0182 3.0182 0 0 0 -2.9599-3.4932zm.9873 3.1641-1.334 8.0005a.9958.9958 0 0 1 -.9863.8354h-13.7442a.9982.9982 0 0 1 -.97-.7578l-2.3107-9.2422h18.3579a1.0049 1.0049 0 0 1 .9873 1.1641z" />
-                <path d="m22 22a3 3 0 1 0 3 3 3.0033 3.0033 0 0 0 -3-3zm0 4a1 1 0 1 1 1-1 1.0009 1.0009 0 0 1 -1 1z" />
-                <path d="m14 22a3 3 0 1 0 3 3 3.0033 3.0033 0 0 0 -3-3zm0 4a1 1 0 1 1 1-1 1.0013 1.0013 0 0 1 -1 1z" />
-                <path d="m19 12v4a1 1 0 0 1 -2 0v-4a1 1 0 0 1 2 0zm4-1a1 1 0 0 0 -1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0 -1-1zm-10 0a1 1 0 0 0 -1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0 -1-1z" />
-              </g>
+            <svg
+              className={cart.open}
+              width={"35px"}
+              viewBox="0 0 30 27"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M29.733 6.64651C29.595 6.44711 29.4108 6.28414 29.196 6.17154C28.9813 6.05895 28.7425 6.00009 28.5 6.00001H7.9995L6.2685 1.84501C6.04153 1.29784 5.6572 0.830389 5.16424 0.501923C4.67127 0.173457 4.09187 -0.00123156 3.4995 6.53586e-06H0V3.00001H3.4995L10.6155 20.0775C10.7295 20.3507 10.9218 20.5841 11.1681 20.7483C11.4145 20.9125 11.7039 21 12 21H24C24.6255 21 25.185 20.6115 25.4055 20.028L29.9055 8.02801C29.9905 7.80094 30.0193 7.55664 29.9892 7.31603C29.9592 7.07543 29.8713 6.84569 29.733 6.64651V6.64651Z"
+                fill="#F0F0F0"
+              />
+              <path
+                d="M12.75 27C13.9926 27 15 25.9926 15 24.75C15 23.5074 13.9926 22.5 12.75 22.5C11.5074 22.5 10.5 23.5074 10.5 24.75C10.5 25.9926 11.5074 27 12.75 27Z"
+                fill="#F0F0F0"
+              />
+              <path
+                d="M23.25 27C24.4926 27 25.5 25.9926 25.5 24.75C25.5 23.5074 24.4926 22.5 23.25 22.5C22.0074 22.5 21 23.5074 21 24.75C21 25.9926 22.0074 27 23.25 27Z"
+                fill="#F0F0F0"
+              />
             </svg>
           ) : (
             <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              id="line"
-              viewBox="0 0 64 64"
             >
               <path
-                d="M62,55.184V31.5a3,3,0,0,0-3-3H20.5a3,3,0,0,0-3,3V55.184A3,3,0,0,0,15.5,58v3a3,3,0,0,0,3,3H61a3,3,0,0,0,3-3V58A3,3,0,0,0,62,55.184ZM46.75,37.5a3,3,0,0,1,3-3H53a3,3,0,0,1,3,3v3.25a3,3,0,0,1-3,3H49.75a3,3,0,0,1-3-3Zm-22.25-3H41.273a1,1,0,0,1,0,2H24.5a1,1,0,0,1,0-2Zm0,7.25H37.648a1,1,0,0,1,0,2H24.5a1,1,0,0,1,0-2Zm0,7.25H55a1,1,0,0,1,0,2H24.5a1,1,0,0,1,0-2ZM62,61a1,1,0,0,1-1,1H18.5a1,1,0,0,1-1-1V58a1,1,0,0,1,1-1H30.3a1,1,0,0,1,.708.293l1.828,1.828A2.978,2.978,0,0,0,34.953,60h9.594a2.978,2.978,0,0,0,2.121-.879L48.5,57.293A1.009,1.009,0,0,1,49.2,57H61a1,1,0,0,1,1,1Z"
-                style="fill: rgb(0, 0, 0);"
-                fill="#c4a2fc"
-              ></path>
-              <path
-                d="M45.5,9.016H9.369L8.784,2.722A2.987,2.987,0,0,0,5.8,0H1A1,1,0,0,0,1,2H5.8a1,1,0,0,1,1,.908l2.87,30.87A2.986,2.986,0,0,0,12.648,36.5H14.7a4.625,4.625,0,1,0,7.6,0H33.848a4.625,4.625,0,1,0,7.6,0H43.5a2.986,2.986,0,0,0,2.987-2.722l2-21.484A3,3,0,0,0,45.5,9.016ZM10.553,21.758l-1-10.742H20.594l.333,10.742ZM18.5,41.75a2.625,2.625,0,1,1,2.625-2.625A2.629,2.629,0,0,1,18.5,41.75ZM12.648,34.5a1,1,0,0,1-.995-.908l-.914-9.834h10.25L21.322,34.5Zm20.235,0h-9.56L22.99,23.758H33.216Zm.395-12.742H22.928L22.6,11.016H33.611Zm4.37,19.992a2.625,2.625,0,1,1,2.625-2.625A2.629,2.629,0,0,1,37.648,41.75Zm6.85-8.157a.994.994,0,0,1-.995.907H34.885l.333-10.742H45.412Zm1.1-11.835H35.279l.334-10.742H45.5a1,1,0,0,1,.995,1.092Z"
-                style="fill: rgb(83, 202, 173);"
-                fill="#151a6a"
-              ></path>
+                d="M0.559099 0.559099C0.917199 0.201108 1.40282 0 1.90917 0C2.41553 0 2.90115 0.201108 3.25925 0.559099L10.0115 7.31138L16.7638 0.559099C17.124 0.211254 17.6063 0.0187787 18.107 0.0231296C18.6077 0.0274804 19.0866 0.228309 19.4407 0.582361C19.7947 0.936413 19.9956 1.41536 19.9999 1.91605C20.0043 2.41673 19.8118 2.8991 19.464 3.25925L12.7117 10.0115L19.464 16.7638C19.8118 17.124 20.0043 17.6063 19.9999 18.107C19.9956 18.6077 19.7947 19.0866 19.4407 19.4407C19.0866 19.7947 18.6077 19.9956 18.107 19.9999C17.6063 20.0043 17.124 19.8118 16.7638 19.464L10.0115 12.7117L3.25925 19.464C2.8991 19.8118 2.41673 20.0043 1.91605 19.9999C1.41536 19.9956 0.936413 19.7947 0.582361 19.4407C0.228309 19.0866 0.0274804 18.6077 0.0231296 18.107C0.0187787 17.6063 0.211254 17.124 0.559099 16.7638L7.31138 10.0115L0.559099 3.25925C0.201108 2.90115 0 2.41553 0 1.90917C0 1.40282 0.201108 0.917199 0.559099 0.559099Z"
+                fill="#F0F0F0"
+              />
             </svg>
           )}
         </div>
-        {!cartOpen && <div className={cart.productsNumber}>{productsLength}</div>}
+        {!cartOpen && (
+          <div className={cart.productsNumber}>{productsLength}</div>
+        )}
       </div>
 
       {cartItems && cartOpen && (
-        <div>
+        <div className={cart.cart}>
           <h2>Tu carrito</h2>
-      
+
           {cartItems.length === 0 ? (
-            <p>Tu carrito está vacío</p>
+            <p className={cart.cartVacio}>Tu carrito esta vacio</p>
           ) : (
-            <div>
-              {cartItems.map((item, i) => {
-                return <ItemCart key={i} item={item} />;
-              })}
+            <div className={cart.productsContainer}>
+              {cartItems.map((item, i) => (
+                <ItemCart key={i} item={item} />
+              ))}
             </div>
           )}
+
+          <h2 className={cart.total}>Total: ${total}</h2>
         </div>
       )}
-
-      <h2>Total: ${total}</h2>
     </div>
   );
-}
+};
+
+export default Cart;
