@@ -1,0 +1,41 @@
+ @media only screen and (max-width: 960px) {
+        .responsive {
+            flex-direction: column !important;
+            gap: 4rem !important;
+
+        }
+
+        .responsive img {
+            width: 250px !important;
+            height: 250px !important;
+        }
+
+       .texto {
+        width: 100% !important;
+        align-items: center !important;
+        font-size: 35px;
+       }
+
+       
+}
+
+@media only screen and (max-width: 607px) {
+    .botonCambios {
+        gap: 25px !important;
+
+    }
+
+
+    .botonCambios button {
+        border-radius: 50% !important;
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+@media only screen and (max-width: 532px) {
+    .responsive img {
+        width: 140px !important;
+        height: 140px !important;
+    }
+}

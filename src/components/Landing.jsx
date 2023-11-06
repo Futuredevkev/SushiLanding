@@ -1,35 +1,39 @@
-import imagenSushi from "../imagenes/pexels-ivan-samkov-8951248.jpg";
+import imagenSushi from "../imagenes/pexels-ivan-samkov-8951248.jpg.png";
+import { useNavigate } from 'react-router-dom';
+import './responsive.css'
+
 
 export default function Landing() {
+
+  const navigateToSushis = useNavigate();
+    
+  const handleGoToLanding = () => {
+    navigateToSushis("/products");
+
+
+    }
   return (
-    <div className="flex justify-center items-center w-full h-screen p-5 gap-5 flex-wrap">
+    <div className="flex justify-center items-center w-full h-screen p-5 gap-24 flex-wrap responsive">
       <div className="flex justify-center items-center">
         <img
-          style={{ width: "430px", height: "600px" }}
+          style={{ width: "400px", height: "400px" }}
+          className="responsive"
           src={imagenSushi}
           alt="Sushi"
         />
       </div>
 
-      <div className="flex justify-center items-start w-1/2 p-5 text-black uppercase text-lg flex-col gap-10">
+      <div className="flex justify-center items-start w-1/2 p-5 text-black uppercase text-lg flex-col gap-10 texto">
         <h2 className="text-5xl font-bold">
-          <span className="text-orange-500">Sushi</span>Rush
+          <span className="text-black texto">Sushi made with special care</span>
         </h2>
-        <p className="text-lg">
-          ¡Descubre el auténtico sabor del sushi en SushiRush! Sumérgete en una
-          experiencia culinaria única con nuestra amplia gama de exquisitos
-          rollos de sushi, cuidadosamente elaborados para satisfacer tus
-          sentidos. En SushiRush, fusionamos la frescura de los ingredientes más
-          selectos con la maestría de nuestros chefs, creando platillos que te
-          transportarán a Japón en cada bocado. Disfruta de la mezcla perfecta
-          de tradición y creatividad en cada rollo, desde los clásicos hasta las
-          creaciones exclusivas de nuestra casa. Déjate llevar por los sabores,
-          las texturas y la presentación impecable de nuestras delicias
-          gastronómicas. Ya sea una comida rápida o una velada especial,
-          SushiRush te brinda una experiencia inigualable en cada visita. ¡Únete
-          a nosotros y déjate llevar por la emoción del sushi en su máxima
-          expresión!
+        <p style={{fontSize:'15px'}}>
+        Browse our menu to find your favorite sushi dishes, or try something new!
+        Whether you re craving classic California rolls or adventurous Dragon rolls, we have something for everyone.
         </p>
+        <button onClick={handleGoToLanding} className="uppercase w-[300px] bg-orange-500 h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#FFA500] before:to-[rgb(255, 127, 80)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]">
+        Explorar  
+      </button>
       </div>
     </div>
   );

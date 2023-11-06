@@ -5,6 +5,7 @@ import ItemCart from "./ItemCart";
 import { useNavigate  } from 'react-router-dom';
 
 
+
 const Cart = () => {
 
   const navigateTo = useNavigate();
@@ -105,7 +106,7 @@ const Cart = () => {
               ))}
             </div>
           )}
-            <div className="flex justify-between p-5 items-end h-full">    
+            <div className="flex justify-between p-5 items-end gap-5">    
           <h2 style={{fontWeight:'bold', fontSize:'25px'}} className={cart.total}>Total: ${total}</h2>
           <button
           onClick={handleGoToCheckout}

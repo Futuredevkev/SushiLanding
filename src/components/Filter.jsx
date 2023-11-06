@@ -14,27 +14,27 @@ export function ProductsFilter({ products }) {
 
   return (
     <>
-      <div className="flex justify-center items-center w-full gap-20 mt-10 mb-10 text-xl font-bold">
+      <div className="flex justify-center items-center w-full mt-10 mb-10 text-xl font-bold botonCambios" style={{gap:'1rem'}}>
         <button
-          className="hover:bg-black hover:text-white hover:rounded-full w-24 h-10"
+          className="bg-black text-white rounded-full w-24 h-10"
           onClick={() => filterProducts("all")}
         >
           Todos
         </button>
         <button
-          className="hover:bg-black hover:text-white hover:rounded-full w-24 h-10"
+          className="bg-black text-white rounded-full w-24 h-10"
           onClick={() => filterProducts("sashimi")}
         >
           Sashimi
         </button>
         <button
-          className="hover:bg-black hover:text-white hover:rounded-full w-24 h-10"
+          className="bg-black text-white rounded-full w-24 h-10"
           onClick={() => filterProducts("maki")}
         >
           Maki
         </button>
         <button
-          className="hover:bg-black hover:text-white hover:rounded-full w-24 h-10"
+          className="bg-black text-white rounded-full w-24 h-10"
           onClick={() => filterProducts("nigiri")}
         >
           Nigiri

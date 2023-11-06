@@ -23,7 +23,7 @@ export default function Navbar() {
           </h1>
         </div>
 
-        <nav className="flex justify-center items-center gap-8 text-black font-bold text-lg">
+        <nav className="flex justify-center items-center gap-8 text-black font-bold text-lg uppercase navbar">
           <Link
             to="/"
             className={`menu-item ${
@@ -41,15 +41,6 @@ export default function Navbar() {
             onClick={() => handleSectionClick("Pedir Sushi")}
           >
             Sushis
-          </Link>
-          <Link
-            to="./contacto"
-            className={`menu-item ${
-              selectedSection === "Contacto" ? "selected" : ""
-            }`}
-            onClick={() => handleSectionClick("Contacto")}
-          >
-            Contacto
           </Link>
         </nav>
       </div>

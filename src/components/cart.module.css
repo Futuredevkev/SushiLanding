@@ -1,3 +1,5 @@
+
+
 .cartContainer {
     width: 100vw;
     display: flex;
@@ -10,7 +12,7 @@
     margin-top: 10px;
     margin-right: 20px;
     cursor: pointer;
-    z-index: 100000000;
+    z-index: 10000000;
   }
   
   .cartContainer .buttonCartContainer svg {
@@ -68,7 +70,10 @@
   .cartContainer .cart .cartVacio {
     text-align: center;
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .cartContainer .cart .total {
@@ -95,4 +100,27 @@
     background-color: #797979;
     border-radius: 20px;
   }
+
+
+  @media only screen and (max-width: 607px) {
+    .cartContainer .cart {
+        top: 0 !important; /* Ajuste para ocupar toda la pantalla */
+        right: 0 !important; /* Ajuste para ocupar toda la pantalla */
+        width: 100vw !important; /* Cambiando el ancho para ocupar toda la pantalla */
+        height: 100vh !important; /* Cambiando la altura para ocupar toda la pantalla */
+        min-height: 100vh !important; /* Asegurando que tenga al menos la altura de la pantalla */
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .cartContainer .buttonCartContainer {
+      margin-top: -85px;
+    }
+
+    @media only screen and (max-width: 384px) {
+      .cartContainer .buttonCartContainer {
+        margin-right: 7px;
+      }
+    }
   
+  }

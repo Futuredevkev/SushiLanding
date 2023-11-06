@@ -16,3 +16,10 @@
     border-bottom: 3px solid orange; 
     margin-bottom: 1px; 
   }
+
+
+  @media (max-width: 1148px) {
+    .navbar {
+      display: none !important; /* Oculta el menú en resoluciones de 1148px o superiores */
+    }
+  }
