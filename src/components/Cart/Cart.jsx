@@ -1,5 +1,5 @@
 import  { useContext, useEffect, useState } from "react";
-import CartContext from "../Context/CartContext";
+import CartContext from "../../Context/CartContext";
 import cart from './cart.module.css';
 import ItemCart from "./ItemCart";
 import { useNavigate  } from 'react-router-dom';
@@ -14,9 +14,6 @@ const Cart = () => {
     navigateTo("/checkout");
   }
 
-
- 
-  
   /* Creamos 2 estados, uno para ver si el carrito esta abierto o no 
 
   y otro para obtener la cantidad de productos que tenemos en el carrito */

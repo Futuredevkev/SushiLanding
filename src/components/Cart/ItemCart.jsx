@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import CartContext from '../Context/CartContext';
+import CartContext from '../../Context/CartContext';
 
 export default function ItemCart({ item }) {
   const { deleteItemToCart, addItemToCart } = useContext(CartContext);
@@ -18,7 +18,7 @@ export default function ItemCart({ item }) {
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <button
+          <button 
             onClick={() => addItemToCart(item)}
             className="w-full sm:w-auto bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600 mb-2 sm:mb-0 sm:mr-2"
           >

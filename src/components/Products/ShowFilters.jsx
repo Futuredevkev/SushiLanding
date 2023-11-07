@@ -1,5 +1,5 @@
 import { ProductsFilter } from "./Filter";
-import { products } from "../mocks/products.json";
+import { products } from "../../mocks/products.json";
 
 
 export default function ShowFilters() {

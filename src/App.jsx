@@ -1,16 +1,16 @@
 import "./App.css";
 import { useState, useEffect } from "react"; // Agrega la importación de 'useState' desde React
-import Navbar from "./components/Navbar";
-import Landing from "./components/Landing";
+import Navbar from "./components/Navbar/Navbar";
+import Landing from "./components/Basic/Landing";
 import { Routes, Route, useLocation } from "react-router-dom";
-import ShowFilters from "./components/ShowFilters";
-import Cart from "./components/Cart";
+import ShowFilters from "./components/Products/ShowFilters";
+import Cart from "./components/Cart/Cart";
 import { CartProvider } from "./Context/CartContext";
-import CheckOutPage from "./components/CheckOutPage";
+import CheckOutPage from "./components/checkout/CheckOutPage";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import sushiGiratorio from "./imagenes/giphy.gif"
-import Footer from "./components/Footer";
-import HamburgerMenu from "./components/HamburgerMenu";
+import Footer from "./components/Basic/Footer";
+import HamburgerMenu from "./components/Navbar/HamburgerMenu";
 
 export default function App() {
   const location = useLocation();

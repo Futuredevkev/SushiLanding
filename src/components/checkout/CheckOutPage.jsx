@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import CartContext from '../Context/CartContext';
+import CartContext from '../../Context/CartContext';
 import { useNavigate } from 'react-router-dom';
-import SushiSad from '../imagenes/noun-sad-cute-sushi-2866696.png'
+import SushiSad from '../../imagenes/noun-sad-cute-sushi-2866696.png'
 
 export default function CheckOutPage() {
     const { cartItems } = useContext(CartContext);

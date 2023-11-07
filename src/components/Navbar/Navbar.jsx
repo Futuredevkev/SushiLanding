@@ -1,5 +1,5 @@
 import { useState } from "react";
-import sushiIcon from "../assets/ball-svgrepo-com.svg";
+import sushiIcon from "../../assets/ball-svgrepo-com.svg";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
@@ -23,7 +23,7 @@ export default function Navbar() {
           </h1>
         </div>
 
-        <nav className="flex justify-center items-center gap-8 text-black font-bold text-lg uppercase navbar">
+        <nav className="flex justify-center items-center gap-8 text-black font-bold text-lg navbar">
           <Link
             to="/"
             className={`menu-item ${

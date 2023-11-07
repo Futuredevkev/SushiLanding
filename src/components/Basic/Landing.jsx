@@ -1,6 +1,6 @@
-import imagenSushi from "../imagenes/pexels-ivan-samkov-8951248.jpg.png";
+import imagenSushi from "../../imagenes/pexels-ivan-samkov-8951248.jpg.png";
 import { useNavigate } from 'react-router-dom';
-import './responsive.css'
+import '../responsive.css'
 
 
 export default function Landing() {

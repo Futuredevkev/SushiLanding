@@ -1,7 +1,7 @@
 import React from 'react'
-import sushiIcon from "../assets/ball-svgrepo-com.svg";
-import facebook from '../assets/facebook-svgrepo-com.svg'
-import ig from '../assets/instagram-svgrepo-com.svg'
+import sushiIcon from "../../assets/ball-svgrepo-com.svg";
+import facebook from '../../assets/facebook-svgrepo-com.svg'
+import ig from '../../assets/instagram-svgrepo-com.svg'
 
 export default function Footer() {
   return (
