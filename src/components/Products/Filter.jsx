@@ -41,7 +41,9 @@ export function ProductsFilter({ products }) {
         </button>
       </div>
 
-      <Products products={filteredProducts} />
+      <div className="products-container" style={{ height: "600px", overflowY: "auto" }}>
+        <Products products={filteredProducts} />
+      </div>
     </>
   );
 }

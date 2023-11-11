@@ -11,7 +11,7 @@ export function Products({ products }) {
       <ul className="flex justify-center items-center flex-wrap gap-5 mt-5">
         {products.map((product) => (
           <div
-            className="flex flex-col justify-start items-center bg-transparent shadow-lg rounded-lg gap-3"
+            className="flex flex-col justify-start items-center  bg-transparent shadow-lg rounded-lg gap-3"
             style={{ width: "320px", height: "433px" }}
             key={product.id}
           >
