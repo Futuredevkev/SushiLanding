@@ -5,7 +5,7 @@
       "nombre": "Salmón Sashimi",
       "tipo": "sashimi",
       "precio": 9,
-      "imagenes": "/public/salonsashimi.jpg",
+      "imagenes": "/salonsashimi.jpg",
       "descripcion": "Fresco filete de salmón crudo cortado en finas láminas.",
       "amount": 0
     },
@@ -14,7 +14,7 @@
       "nombre": "Atún Sashimi",
       "tipo": "sashimi",
       "precio": 9,
-      "imagenes": "/public/atunsashimi.jpg",
+      "imagenes": "/atunsashimi.jpg",
       "descripcion": "Delicioso atún fresco cortado en rebanadas delgadas para sashimi.",
       "amount": 0
     },
@@ -23,7 +23,7 @@
       "nombre": "Pez mantequilla Sashimi",
       "tipo": "sashimi",
       "precio": 10,
-      "imagenes": "/public/SASHIMI-PEZ-MANTEQUILLA.jpg",
+      "imagenes": "/SASHIMI-PEZ-MANTEQUILLA.jpg",
       "descripcion": "Exquisito sashimi de pez manteq uilla, suave y sabroso.",
       "amount": 0
     },
@@ -32,7 +32,7 @@
       "nombre": "Pargo Sashimi",
       "tipo": "sashimi",
       "precio": 11,
-      "imagenes": "/public/pargo.jpg",
+      "imagenes": "/pargo.jpg",
       "descripcion": "Sashimi de pargo fresco, una opción llena de sabor.",
       "amount": 0
     },
@@ -41,7 +41,7 @@
       "nombre": "California Roll Maki",
       "tipo": "maki",
       "precio": 12,
-      "imagenes": "/public/caliofrniaroll.jpg",
+      "imagenes": "/caliofrniaroll.jpg",
       "descripcion": "Maki enrollado con palta, pepino y cangrejo, cubierto con sésamo.",
       "amount": 0
     },
@@ -50,7 +50,7 @@
       "nombre": "Sake Maki",
       "tipo": "maki",
       "precio": 10,
-      "imagenes": "/public/maki-sake.jpg",
+      "imagenes": "/maki-sake.jpg",
       "descripcion": "Maki de salmón fresco, una elección sabrosa para los amantes del salmón.",
       "amount": 0
     },
@@ -59,7 +59,7 @@
       "nombre": "Kappa Maki",
       "tipo": "maki",
       "precio": 9,
-      "imagenes": "/public/kappa-maki-square.jpg",
+      "imagenes": "/kappa-maki-square.jpg",
       "descripcion": "Maki de pepino, una opción refrescante y vegetariana.",
       "amount": 0
     },
@@ -68,7 +68,7 @@
       "nombre": "Tekka Maki",
       "tipo": "maki",
       "precio": 11,
-      "imagenes": "/public/tekka_maki.jpg",
+      "imagenes": "/tekka_maki.jpg",
       "descripcion": "Rollos de sushi con atún fresco, un clásico delicioso.",
       "amount": 0
     },
@@ -77,7 +77,7 @@
       "nombre": "Salmón Nigiri",
       "tipo": "nigiri",
       "precio": 5,
-      "imagenes": "/public/salmonnigiri.jpg",
+      "imagenes": "/salmonnigiri.jpg",
       "descripcion": "Salmón sobre arroz, un nigiri clásico y delicioso.",
       "amount": 0
     },
@@ -86,7 +86,7 @@
       "nombre": "Langostino Nigiri",
       "tipo": "nigiri",
       "precio": 7,
-      "imagenes": "/public/langostinonigiri.jpg",
+      "imagenes": "/langostinonigiri.jpg",
       "descripcion": "Langostino sobre arroz, un nigiri exquisito y elegante.",
       "amount": 0
     }
